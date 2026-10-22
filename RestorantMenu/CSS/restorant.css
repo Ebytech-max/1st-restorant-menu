@@ -1,0 +1,287 @@
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #29251f;
+    background-color: #fffdf8;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Navigation */
+header {
+    background-color: #fffdf8;
+    border-bottom: 1px solid #eee8df;
+}
+
+.navbar {
+    min-height: 80px;
+    padding: 15px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.logo {
+    color: #29251f;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.logo span,
+.hero h1 span {
+    color: #c56b35;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    color: #29251f;
+    font-size: 14px;
+}
+
+.nav-links a:hover {
+    color: #c56b35;
+}
+
+.nav-button,
+.button {
+    background-color: #c56b35;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.nav-button:hover,
+.button:hover {
+    background-color: #9e4e24;
+}
+
+/* Hero */
+.hero {
+    padding: 70px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 45px;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.subtitle {
+    color: #c56b35;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 5vw, 62px);
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.hero-content > p:not(.subtitle) {
+    color: #716b63;
+    max-width: 430px;
+    margin-bottom: 25px;
+}
+
+.hero-image {
+    flex: 1;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+/* Menu */
+.menu-section {
+    background-color: #f7f2ea;
+    padding: 70px 7%;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.section-heading h2,
+.about-section h2,
+.contact-section h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.section-heading > p:last-child,
+.about-section > p:last-child,
+.contact-section p {
+    color: #716b63;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.food-card {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease;
+}
+
+.food-card:hover {
+    transform: translateY(-6px);
+}
+
+.food-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.food-info {
+    padding: 20px;
+}
+
+.food-info h3 {
+    margin-bottom: 8px;
+}
+
+.food-info p {
+    color: #716b63;
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+.food-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.price {
+    color: #c56b35;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.order-link {
+    color: #c56b35;
+    font-weight: bold;
+}
+
+/* About */
+.about-section {
+    padding: 70px 10%;
+    text-align: center;
+}
+
+.about-section > p:last-child {
+    max-width: 650px;
+    margin: 15px auto 0;
+}
+
+/* Contact */
+.contact-section {
+    padding: 60px 7%;
+    background-color: #29251f;
+    color: white;
+    text-align: center;
+}
+
+.contact-section p {
+    color: #ded6cd;
+    margin-bottom: 22px;
+}
+
+/* Footer */
+footer {
+    background-color: #1d1a16;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .navbar {
+        justify-content: center;
+    }
+
+    .hero {
+        gap: 25px;
+    }
+
+    .menu-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        flex-direction: column;
+        align-items: stretch;
+        padding-top: 45px;
+    }
+
+    .hero-image img {
+        height: 280px;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading h2,
+    .about-section h2,
+    .contact-section h2 {
+        font-size: 26px;
+    }
+}
